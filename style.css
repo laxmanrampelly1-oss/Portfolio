@@ -1,9 +1,8 @@
-/* ===== General Styles ===== */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Arial', sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 body {
@@ -71,9 +70,9 @@ section h2 {
 /* ===== About Section ===== */
 .profile-pic {
   width: 150px;
-  border-radius: 50%;
+  /* border-radius: 50%;
   margin-bottom: 20px;
-  border: 4px solid #4CAF50;
+  border: 4px solid #4CAF50; */
 }
 
 /* ===== Projects ===== */
@@ -99,25 +98,100 @@ section h2 {
   margin-bottom: 10px;
 }
 
-.project-card h3 {
-  margin-bottom: 5px;
-  color: #333;
-}
-
-.project-card p {
-  color: #666;
-}
-
 .project-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 20px rgba(0,0,0,0.3);
 }
 
-/* ===== Contact Form ===== */
-form {
-  max-width: 500px;
-  margin: 0 auto;
-  text-align: left;
+/* ===== Contact Section ===== */
+.contact-section {
+  background: #ffffff;
+  padding: 60px 20px;
 }
 
-f
+.contact-form {
+  max-width: 450px;
+  margin: 0 auto;
+  background: #f9f9f9;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1.5px solid #ccc;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s;
+}
+
+.contact-form textarea {
+  height: 100px;
+  resize: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 6px rgba(76, 175, 80, 0.5);
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background: linear-gradient(135deg, #4CAF50, #2e8b57);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: linear-gradient(135deg, #45a049, #1f7a4d);
+  transform: translateY(-2px);
+}
+
+#confirmation {
+  margin-top: 10px;
+  color: #4CAF50;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* ===== Footer ===== */
+footer {
+  background: linear-gradient(135deg, #ff416c, #ff4b2b, #ffcc00);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  margin-top: 40px;
+  font-weight: bold;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .project-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin: 8px 0;
+  }
+}
